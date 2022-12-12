@@ -11,7 +11,7 @@
 4. Change Page Title
 5. Move styles to external folder 'style'
 6. Change App name in the navbar.
-7. Set a background image (maybe a concert venue) content area in the full width.
+7. Set a background image (maybe a concert venue) content area in full width.
 8. Style hero area. https://uicookies.com/bootstrap-cards/
 9. You have a list of songs from the 2000s in an array object. With the Artist button on every click Randomly grab the SongName display that in the SongTitle paragraph.
 AlbumName with Album title, and Artist in the artist div. (Hints: Math.floor, Math.Random, Document Object Model, innerHtml)
