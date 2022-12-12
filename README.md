@@ -15,4 +15,4 @@
 AlbumName with Album title, and Artist in the artist div. (Hints: Math.floor, Math.Random, Document Object Model, innerHtml)
 8. Add another property in the TwoKSongs object 'ArtistImage'. Get image links to the Artist image give it a fixed size of 3000x300px add that to artisimg div on everyclick.
 9. Move js code to external folder js.
-
+10. Ref(https://getbootstrap.com/docs/5.2/getting-started/introduction/ , https://www.w3schools.com/js/js_htmldom.asp)
