@@ -103,13 +103,17 @@
         }
         ]
 
-        //let getArtist = document.querySelector("");
-        let getSongTitle = document.querySelector("");
-        let getArtistSongBtn = document.querySelector("");
+        let getArtist = document.querySelector(".artist");
+        let getSongTitle = document.querySelector(".songTitle");
+        let getArtistSongBtn = document.querySelector(".artistSongBtn");
+        let getAlbumName = document.querySelector(".AlbumName")
 
         getArtistSongBtn.addEventListener("click" , function(){
-            //console.log("Test!")
-          
+             //console.log("Test!")
+            let randomSongs = Math.floor(Math.random() * TwoKSongs.length)
+            getSongTitle.innerHTML = TwoKSongs[randomSongs].SongName;
+            getArtist.innerHTML = TwoKSongs[randomSongs].Artist;
+            getAlbumName.innerHTML = TwoKSongs[randomSongs].Album;
         })
     </script>
 </body>
