@@ -54,7 +54,9 @@
               <div class="col-lg-6 col-md-8 mx-auto p-5 bg-info">
                 <h1 class="fw-light AlbumName">Album example</h1>
                 <p class="lead text-muted songTitle text-uppercase text-xl-center">Title.</p>
-                 <div class="artistimg"></div>
+                 <div class="artistimg">
+                    <img src="" alt="" class="imgArt">
+                 </div>
                 <div class="artist p-1"></div>
                 <button  type="button"  class="btn btn-primary artistSongBtn">Artist</button>
               </div>
@@ -72,7 +74,9 @@
      let TwoKSongs =    [{
             SongName : "Fireman",
             Album: "The Carter II",
-            Artist: "Lil Wayne" 
+            Artist: "Lil Wayne" ,
+            img : "wayne.jpg"
+
         },{
             SongName : "Californication",
             Album : "Californication",
@@ -107,6 +111,7 @@
         let getSongTitle = document.querySelector(".songTitle");
         let getArtistSongBtn = document.querySelector(".artistSongBtn");
         let getAlbumName = document.querySelector(".AlbumName")
+        let imgArt = document.querySelector(".imgArt")
 
         getArtistSongBtn.addEventListener("click" , function(){
              //console.log("Test!")
@@ -114,6 +119,7 @@
             getSongTitle.innerHTML = TwoKSongs[randomSongs].SongName;
             getArtist.innerHTML = TwoKSongs[randomSongs].Artist;
             getAlbumName.innerHTML = TwoKSongs[randomSongs].Album;
+            imgArt.src = TwoKSongs[randomSongs].img
         })
     </script>
 </body>
