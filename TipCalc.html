@@ -44,15 +44,15 @@
    
         <div class="input-group mb-3">
             <span class="input-group-text">$ Bill</span>
-            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+            <input type="number" class="form-control" id="BillA" aria-label="Amount (to the nearest dollar)">
             <span class="input-group-text">.00</span>
           </div>
         <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
             <div class="btn-group me-2" role="group" aria-label="First group">
-              <button type="button" class="btn btn-outline-secondary five">5%</button>
-              <button type="button" class="btn btn-outline-secondary ten">10%</button>
-              <button type="button" class="btn btn-outline-secondary  fifteen">15%</button>
-              <button type="button" class="btn btn-outline-secondary twenty">20%</button>
+              <button type="button" id="five" class="btn btn-outline-secondary five" onclick="CalculateTip(5)">5%</button>
+              <button type="button" id="ten" class="btn btn-outline-secondary ten" onclick="CalculateTip(10)">10%</button>
+              <button type="button" class="btn btn-outline-secondary  fifteen" onclick="CalculateTip(15)">15%</button>
+              <button type="button" class="btn btn-outline-secondary twenty" onclick="CalculateTip(20)">20%</button>
             </div>
             <div class="input-group">
               <div class="input-group-text" id="btnGroupAddon">Custom</div>
@@ -62,8 +62,8 @@
           <div class="card">
               <div class="card-body">
                   <label for="TipAmount">Tip Amount: </label>
-                  <input class="card-text Tip form-control" readonly />
-                  <a href="#" class="btn btn-primary">Reset</a>
+                  <input class="card-text Tip form-control" id="TipAmountValue" readonly />
+                  <button type="button" class="btn btn-primary" onclick="Reset()">Reset</button>
               </div>
           </div>
    
@@ -75,3 +75,29 @@
 </body>
 
 </html>
+
+<script>
+   
+
+    function CalculateTip(tipP){
+       
+        let five = document.getElementById("five");
+        let ten = document.getElementById("ten");  
+        let fifteen = document.getElementById("fifteen");  
+        let twenty = document.getElementById("twenty");  
+        let percent = (tipP *100/100);
+        let tipdecimal = parseFloat(percent)/100;
+        let Bill = document.getElementById("BillA").value;
+        Bill = Bill * tipdecimal ;
+
+        let TipAmount  = document.getElementById("TipAmountValue").value = Bill;
+
+        console.log( five.innerText, tipP , percent , tipdecimal , Bill , TipAmount);
+    }
+
+    function Reset(){
+        document.getElementById("TipAmountValue").value = "";
+        document.getElementById("BillA").value= "";
+    }
+
+</script>
